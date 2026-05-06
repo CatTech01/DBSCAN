@@ -36,6 +36,8 @@ ditto -c -k --sequesterRsrc --keepParent build/macos-release/appDBSCAN.app DBSCA
 
 ## Как собрать и открыть на Windows
 
+В исходном коде `.exe` файла нет. Он появляется только после сборки проекта на Windows или после скачивания готового архива из GitHub Actions.
+
 ### Вариант 1: через Qt Creator
 
 1. Установите Qt 6 вместе с Qt Creator.
@@ -65,6 +67,12 @@ build/windows
 build/windows/Release/appDBSCAN.exe
 ```
 
+Если такой папки нет, проверьте также:
+
+```text
+build/windows/appDBSCAN.exe
+```
+
 Если `.exe` не запускается двойным кликом, откройте проект через Qt Creator.
 
 ## Готовые сборки через GitHub
@@ -81,3 +89,5 @@ build/windows/Release/appDBSCAN.exe
 DBSCAN-Visualizer-macOS
 DBSCAN-Visualizer-Windows
 ```
+
+В Windows-архиве `.exe` лежит внутри распакованной папки. Запускайте его оттуда, не вытаскивая отдельно от остальных файлов.
