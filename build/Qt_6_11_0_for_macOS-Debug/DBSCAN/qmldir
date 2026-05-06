@@ -1,0 +1,6 @@
+module DBSCAN
+typeinfo appDBSCAN.qmltypes
+prefer :/qt/qml/DBSCAN/
+Main 254.0 Main.qml
+depends QtQuick
+

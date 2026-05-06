@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/DBSCAN/">
+    <file alias="Main.qml">/Users/anastasiashirsova/Desktop/DBSCAN/Main.qml</file>
+  </qresource>
+</RCC>
+

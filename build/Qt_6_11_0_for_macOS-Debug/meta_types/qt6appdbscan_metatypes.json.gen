@@ -1,0 +1,205 @@
+[
+    {
+        "classes": [
+            {
+                "className": "ClusterAnalyzer",
+                "lineNumber": 8,
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "points",
+                                "type": "QVariantList"
+                            },
+                            {
+                                "name": "clusterId",
+                                "type": "int"
+                            },
+                            {
+                                "name": "unit",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "pixelsPerCentimeter",
+                                "type": "double"
+                            }
+                        ],
+                        "index": 0,
+                        "isConst": true,
+                        "lineNumber": 15,
+                        "name": "clusterInfo",
+                        "returnType": "QVariantMap"
+                    }
+                ],
+                "object": true,
+                "qualifiedClassName": "ClusterAnalyzer",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "ClusterAnalyzer.h",
+        "outputRevision": 69
+    },
+    {
+        "classes": [
+            {
+                "className": "DbscanAlgorithm",
+                "lineNumber": 8,
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "points",
+                                "type": "QVariantList"
+                            },
+                            {
+                                "name": "epsilon",
+                                "type": "double"
+                            },
+                            {
+                                "name": "minPts",
+                                "type": "int"
+                            },
+                            {
+                                "name": "unit",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "coordinateScaleX",
+                                "type": "double"
+                            },
+                            {
+                                "name": "coordinateScaleY",
+                                "type": "double"
+                            },
+                            {
+                                "name": "pixelsPerCentimeter",
+                                "type": "double"
+                            }
+                        ],
+                        "index": 0,
+                        "isConst": true,
+                        "lineNumber": 15,
+                        "name": "buildSteps",
+                        "returnType": "QVariantList"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "points",
+                                "type": "QVariantList"
+                            },
+                            {
+                                "name": "epsilon",
+                                "type": "double"
+                            },
+                            {
+                                "name": "minPts",
+                                "type": "int"
+                            },
+                            {
+                                "name": "unit",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "coordinateScaleX",
+                                "type": "double"
+                            },
+                            {
+                                "name": "coordinateScaleY",
+                                "type": "double"
+                            },
+                            {
+                                "name": "pixelsPerCentimeter",
+                                "type": "double"
+                            }
+                        ],
+                        "index": 1,
+                        "isConst": true,
+                        "lineNumber": 23,
+                        "name": "runImmediately",
+                        "returnType": "QVariantMap"
+                    }
+                ],
+                "object": true,
+                "qualifiedClassName": "DbscanAlgorithm",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "DbscanAlgorithm.h",
+        "outputRevision": 69
+    },
+    {
+        "classes": [
+            {
+                "className": "PointLoader",
+                "lineNumber": 7,
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "fileUrl",
+                                "type": "QUrl"
+                            }
+                        ],
+                        "index": 1,
+                        "lineNumber": 17,
+                        "name": "loadPoints",
+                        "returnType": "QVariantList"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "lineNumber": 10,
+                        "name": "errorString",
+                        "notify": "errorStringChanged",
+                        "override": false,
+                        "read": "errorString",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false,
+                        "virtual": false
+                    }
+                ],
+                "qualifiedClassName": "PointLoader",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "lineNumber": 20,
+                        "name": "errorStringChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "PointLoader.h",
+        "outputRevision": 69
+    }
+]

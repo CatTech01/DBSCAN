@@ -1,0 +1,96 @@
+{
+    "classes": [
+        {
+            "className": "DbscanAlgorithm",
+            "lineNumber": 8,
+            "methods": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "points",
+                            "type": "QVariantList"
+                        },
+                        {
+                            "name": "epsilon",
+                            "type": "double"
+                        },
+                        {
+                            "name": "minPts",
+                            "type": "int"
+                        },
+                        {
+                            "name": "unit",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "coordinateScaleX",
+                            "type": "double"
+                        },
+                        {
+                            "name": "coordinateScaleY",
+                            "type": "double"
+                        },
+                        {
+                            "name": "pixelsPerCentimeter",
+                            "type": "double"
+                        }
+                    ],
+                    "index": 0,
+                    "isConst": true,
+                    "lineNumber": 15,
+                    "name": "buildSteps",
+                    "returnType": "QVariantList"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "points",
+                            "type": "QVariantList"
+                        },
+                        {
+                            "name": "epsilon",
+                            "type": "double"
+                        },
+                        {
+                            "name": "minPts",
+                            "type": "int"
+                        },
+                        {
+                            "name": "unit",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "coordinateScaleX",
+                            "type": "double"
+                        },
+                        {
+                            "name": "coordinateScaleY",
+                            "type": "double"
+                        },
+                        {
+                            "name": "pixelsPerCentimeter",
+                            "type": "double"
+                        }
+                    ],
+                    "index": 1,
+                    "isConst": true,
+                    "lineNumber": 23,
+                    "name": "runImmediately",
+                    "returnType": "QVariantMap"
+                }
+            ],
+            "object": true,
+            "qualifiedClassName": "DbscanAlgorithm",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "DbscanAlgorithm.h",
+    "outputRevision": 69
+}

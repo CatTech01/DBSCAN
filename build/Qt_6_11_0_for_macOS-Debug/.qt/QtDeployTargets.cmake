@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_appDBSCAN_FILE /Users/anastasiashirsova/Desktop/DBSCAN/build/Qt_6_11_0_for_macOS-Debug/appDBSCAN.app/Contents/MacOS/appDBSCAN)
+set(__QT_DEPLOY_TARGET_appDBSCAN_TYPE EXECUTABLE)

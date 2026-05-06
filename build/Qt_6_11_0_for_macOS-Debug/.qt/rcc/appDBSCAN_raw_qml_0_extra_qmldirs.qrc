@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="/qt/qml/DBSCAN/">
+    <file alias="qml/qmldir">/Users/anastasiashirsova/Desktop/DBSCAN/build/Qt_6_11_0_for_macOS-Debug/DBSCAN/qml/qmldir</file>
+    <file alias="qml/components/qmldir">/Users/anastasiashirsova/Desktop/DBSCAN/build/Qt_6_11_0_for_macOS-Debug/DBSCAN/qml/components/qmldir</file>
+  </qresource>
+</RCC>
+

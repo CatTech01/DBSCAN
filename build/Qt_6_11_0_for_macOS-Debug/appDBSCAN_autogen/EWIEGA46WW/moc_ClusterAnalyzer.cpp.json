@@ -1,0 +1,46 @@
+{
+    "classes": [
+        {
+            "className": "ClusterAnalyzer",
+            "lineNumber": 8,
+            "methods": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "points",
+                            "type": "QVariantList"
+                        },
+                        {
+                            "name": "clusterId",
+                            "type": "int"
+                        },
+                        {
+                            "name": "unit",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "pixelsPerCentimeter",
+                            "type": "double"
+                        }
+                    ],
+                    "index": 0,
+                    "isConst": true,
+                    "lineNumber": 15,
+                    "name": "clusterInfo",
+                    "returnType": "QVariantMap"
+                }
+            ],
+            "object": true,
+            "qualifiedClassName": "ClusterAnalyzer",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "ClusterAnalyzer.h",
+    "outputRevision": 69
+}

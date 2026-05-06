@@ -1,0 +1,61 @@
+{
+    "classes": [
+        {
+            "className": "PointLoader",
+            "lineNumber": 7,
+            "methods": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "fileUrl",
+                            "type": "QUrl"
+                        }
+                    ],
+                    "index": 1,
+                    "lineNumber": 17,
+                    "name": "loadPoints",
+                    "returnType": "QVariantList"
+                }
+            ],
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "lineNumber": 10,
+                    "name": "errorString",
+                    "notify": "errorStringChanged",
+                    "override": false,
+                    "read": "errorString",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false,
+                    "virtual": false
+                }
+            ],
+            "qualifiedClassName": "PointLoader",
+            "signals": [
+                {
+                    "access": "public",
+                    "index": 0,
+                    "lineNumber": 20,
+                    "name": "errorStringChanged",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "PointLoader.h",
+    "outputRevision": 69
+}
