@@ -74,7 +74,7 @@
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "pointRadius",
-                            "line": 58,
+                            "line": 60,
                             "message": ""
                         },
                         {
@@ -82,7 +82,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "refreshCanvas",
-                            "line": 66,
+                            "line": 68,
                             "message": ""
                         },
                         {
@@ -90,7 +90,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "makePoint",
-                            "line": 70,
+                            "line": 72,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -98,7 +98,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "useDefaultCoordinateScale",
-                            "line": 76,
+                            "line": 78,
                             "message": ""
                         },
                         {
@@ -106,7 +106,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "copyPoint",
-                            "line": 83,
+                            "line": 85,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -114,7 +114,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "setPoints",
-                            "line": 95,
+                            "line": 97,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -122,7 +122,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "clearSelection",
-                            "line": 100,
+                            "line": 102,
                             "message": "Cannot generate efficient code for storing an array in a non-sequence type"
                         },
                         {
@@ -130,7 +130,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "resetAnalysisCache",
-                            "line": 109,
+                            "line": 113,
                             "message": ""
                         },
                         {
@@ -138,14 +138,6 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "clusterCacheKey",
-                            "line": 114,
-                            "message": "Functions without type annotations won't be compiled"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 5,
-                            "durationMicroseconds": 0,
-                            "functionName": "countClusterPoints",
                             "line": 118,
                             "message": "Functions without type annotations won't be compiled"
                         },
@@ -153,8 +145,16 @@
                             "codegenResult": 2,
                             "column": 5,
                             "durationMicroseconds": 0,
+                            "functionName": "countClusterPoints",
+                            "line": 122,
+                            "message": "Functions without type annotations won't be compiled"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 5,
+                            "durationMicroseconds": 0,
                             "functionName": "showWarning",
-                            "line": 129,
+                            "line": 133,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -162,7 +162,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "continuePendingAction",
-                            "line": 137,
+                            "line": 141,
                             "message": "Cannot generate efficient code for call to untyped JavaScript function"
                         },
                         {
@@ -170,7 +170,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "stopDbscan",
-                            "line": 157,
+                            "line": 161,
                             "message": "Cannot generate efficient code for storing an array in a non-sequence type"
                         },
                         {
@@ -178,7 +178,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "resetPointStates",
-                            "line": 171,
+                            "line": 175,
                             "message": "Cannot load property length from (component in /Users/anastasiashirsova/Desktop/DBSCAN/Main.qml)::points with type QVariant."
                         },
                         {
@@ -186,7 +186,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "pushAction",
-                            "line": 184,
+                            "line": 188,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -194,7 +194,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "addPoint",
-                            "line": 189,
+                            "line": 193,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -202,7 +202,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "removePoint",
-                            "line": 203,
+                            "line": 207,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -210,7 +210,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "clearPoints",
-                            "line": 218,
+                            "line": 222,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -218,7 +218,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "findPointIndex",
-                            "line": 236,
+                            "line": 240,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -226,7 +226,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "getClusterInfo",
-                            "line": 250,
+                            "line": 254,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -234,7 +234,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "distanceXForPoint",
-                            "line": 259,
+                            "line": 263,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -242,7 +242,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "distanceYForPoint",
-                            "line": 269,
+                            "line": 273,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -250,7 +250,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "makeClusterSelection",
-                            "line": 279,
+                            "line": 283,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -258,7 +258,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "makeNoiseSelection",
-                            "line": 295,
+                            "line": 299,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -266,14 +266,6 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "selectionKey",
-                            "line": 309,
-                            "message": "Functions without type annotations won't be compiled"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 5,
-                            "durationMicroseconds": 0,
-                            "functionName": "pairKey",
                             "line": 313,
                             "message": "Functions without type annotations won't be compiled"
                         },
@@ -281,8 +273,16 @@
                             "codegenResult": 2,
                             "column": 5,
                             "durationMicroseconds": 0,
+                            "functionName": "pairKey",
+                            "line": 317,
+                            "message": "Functions without type annotations won't be compiled"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 5,
+                            "durationMicroseconds": 0,
                             "functionName": "distanceBetween",
-                            "line": 319,
+                            "line": 323,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -290,7 +290,7 @@
                             "column": 5,
                             "durationMicroseconds": 1000,
                             "functionName": "updateSelectionState",
-                            "line": 331,
+                            "line": 335,
                             "message": "Cannot load property length from (component in /Users/anastasiashirsova/Desktop/DBSCAN/Main.qml)::selectedItems with type QVariant."
                         },
                         {
@@ -298,7 +298,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "rebuildSelectedItemsForCurrentUnit",
-                            "line": 359,
+                            "line": 367,
                             "message": "Cannot load property length from (component in /Users/anastasiashirsova/Desktop/DBSCAN/Main.qml)::selectedItems with type QVariant."
                         },
                         {
@@ -306,7 +306,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "selectClusterAt",
-                            "line": 379,
+                            "line": 387,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -314,7 +314,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "selectedClusterBounds",
-                            "line": 443,
+                            "line": 453,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -322,7 +322,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "formatNumber",
-                            "line": 489,
+                            "line": 499,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -330,7 +330,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "selectedNoisePoint",
-                            "line": 496,
+                            "line": 506,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -338,15 +338,79 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "clusterInfoText",
-                            "line": 503,
+                            "line": 513,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
                             "codegenResult": 2,
                             "column": 5,
                             "durationMicroseconds": 0,
+                            "functionName": "hasSingleClusterSelection",
+                            "line": 528,
+                            "message": "Cannot load property length from (component in /Users/anastasiashirsova/Desktop/DBSCAN/Main.qml)::selectedItems with type QVariant."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 5,
+                            "durationMicroseconds": 0,
+                            "functionName": "hasPairSelection",
+                            "line": 532,
+                            "message": "Cannot load property length from (component in /Users/anastasiashirsova/Desktop/DBSCAN/Main.qml)::selectedItems with type QVariant."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 5,
+                            "durationMicroseconds": 0,
+                            "functionName": "selectedClusterInfo",
+                            "line": 536,
+                            "message": "function without return type annotation returns QVariantMap. This may prevent proper compilation to Cpp."
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 5,
+                            "durationMicroseconds": 0,
+                            "functionName": "selectClusterCenter",
+                            "line": 543,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 5,
+                            "durationMicroseconds": 0,
+                            "functionName": "selectClusterDiagonal",
+                            "line": 548,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 5,
+                            "durationMicroseconds": 0,
+                            "functionName": "selectClusterMinDistance",
+                            "line": 553,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 5,
+                            "durationMicroseconds": 0,
+                            "functionName": "selectClusterMaxDistance",
+                            "line": 558,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 5,
+                            "durationMicroseconds": 0,
+                            "functionName": "togglePairDistanceLine",
+                            "line": 563,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 5,
+                            "durationMicroseconds": 0,
                             "functionName": "noiseInfoText",
-                            "line": 517,
+                            "line": 568,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -354,15 +418,71 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "pairInfoText",
-                            "line": 526,
+                            "line": 577,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
                             "codegenResult": 2,
                             "column": 5,
                             "durationMicroseconds": 0,
+                            "functionName": "selectedClusterBaseText",
+                            "line": 598,
+                            "message": "function without return type annotation returns QString. This may prevent proper compilation to Cpp."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 5,
+                            "durationMicroseconds": 0,
+                            "functionName": "selectedClusterCenterText",
+                            "line": 610,
+                            "message": "Cannot load property found from call to method selectedClusterInfo, returning QVariant."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 5,
+                            "durationMicroseconds": 0,
+                            "functionName": "selectedClusterMinDistanceText",
+                            "line": 619,
+                            "message": "Cannot load property found from call to method selectedClusterInfo, returning QVariant."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 5,
+                            "durationMicroseconds": 0,
+                            "functionName": "selectedClusterMaxDistanceText",
+                            "line": 628,
+                            "message": "Cannot load property found from call to method selectedClusterInfo, returning QVariant."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 5,
+                            "durationMicroseconds": 0,
+                            "functionName": "selectedClusterDiagonalText",
+                            "line": 637,
+                            "message": "Cannot load property found from call to method selectedClusterInfo, returning QVariant."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 5,
+                            "durationMicroseconds": 0,
+                            "functionName": "pairDistanceCaption",
+                            "line": 646,
+                            "message": "function without return type annotation returns QString. This may prevent proper compilation to Cpp."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 5,
+                            "durationMicroseconds": 0,
+                            "functionName": "pairDistanceValueText",
+                            "line": 665,
+                            "message": "function without return type annotation returns QString. This may prevent proper compilation to Cpp."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 5,
+                            "durationMicroseconds": 0,
                             "functionName": "isNoiseSelected",
-                            "line": 547,
+                            "line": 672,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -370,7 +490,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "isSelectedClusterCenter",
-                            "line": 556,
+                            "line": 681,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -378,7 +498,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "applyAction",
-                            "line": 570,
+                            "line": 695,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -386,7 +506,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "revertAction",
-                            "line": 588,
+                            "line": 713,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -394,7 +514,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "undo",
-                            "line": 621,
+                            "line": 746,
                             "message": "Cannot load property length from (component in /Users/anastasiashirsova/Desktop/DBSCAN/Main.qml)::undoStack with type QVariant."
                         },
                         {
@@ -402,7 +522,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "redo",
-                            "line": 634,
+                            "line": 759,
                             "message": "Cannot load property length from (component in /Users/anastasiashirsova/Desktop/DBSCAN/Main.qml)::redoStack with type QVariant."
                         },
                         {
@@ -410,7 +530,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "parseNumber",
-                            "line": 647,
+                            "line": 772,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -418,7 +538,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "parsePositiveInt",
-                            "line": 652,
+                            "line": 777,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -426,7 +546,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "epsilonToPixelSize",
-                            "line": 657,
+                            "line": 782,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -434,7 +554,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "applyDbscanStep",
-                            "line": 674,
+                            "line": 799,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -442,7 +562,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "finishDbscanImmediately",
-                            "line": 706,
+                            "line": 827,
                             "message": "Cannot load property length from (component in /Users/anastasiashirsova/Desktop/DBSCAN/Main.qml)::dbscanSteps with type QVariant."
                         },
                         {
@@ -450,7 +570,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "startDbscan",
-                            "line": 721,
+                            "line": 842,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -458,7 +578,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "generateRandomPoints",
-                            "line": 771,
+                            "line": 888,
                             "message": "Cannot load property length from (component in /Users/anastasiashirsova/Desktop/DBSCAN/Main.qml)::points with type QVariant."
                         },
                         {
@@ -466,7 +586,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "loadPointsFromFile",
-                            "line": 797,
+                            "line": 914,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -474,7 +594,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "colorForCluster",
-                            "line": 852,
+                            "line": 969,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -482,7 +602,23 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "drawEpsilonArea",
-                            "line": 859,
+                            "line": 976,
+                            "message": "Functions without type annotations won't be compiled"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 5,
+                            "durationMicroseconds": 0,
+                            "functionName": "drawWhiteConnection",
+                            "line": 993,
+                            "message": "Functions without type annotations won't be compiled"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 5,
+                            "durationMicroseconds": 0,
+                            "functionName": "drawHighlightedPoint",
+                            "line": 1004,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -490,7 +626,7 @@
                             "column": 22,
                             "durationMicroseconds": 0,
                             "functionName": "onTriggered",
-                            "line": 882,
+                            "line": 1019,
                             "message": "Cannot load property length from (component in /Users/anastasiashirsova/Desktop/DBSCAN/Main.qml)::dbscanSteps with type QVariant."
                         },
                         {
@@ -498,7 +634,7 @@
                             "column": 22,
                             "durationMicroseconds": 0,
                             "functionName": "nameFilters",
-                            "line": 898,
+                            "line": 1035,
                             "message": ""
                         },
                         {
@@ -506,7 +642,7 @@
                             "column": 21,
                             "durationMicroseconds": 0,
                             "functionName": "onAccepted",
-                            "line": 899,
+                            "line": 1036,
                             "message": "Cannot generate efficient code for call to untyped JavaScript function"
                         },
                         {
@@ -514,7 +650,7 @@
                             "column": 16,
                             "durationMicroseconds": 0,
                             "functionName": "width",
-                            "line": 906,
+                            "line": 1043,
                             "message": ""
                         },
                         {
@@ -522,7 +658,7 @@
                             "column": 22,
                             "durationMicroseconds": 0,
                             "functionName": "closePolicy",
-                            "line": 908,
+                            "line": 1045,
                             "message": ""
                         },
                         {
@@ -530,7 +666,7 @@
                             "column": 27,
                             "durationMicroseconds": 0,
                             "functionName": "centerIn",
-                            "line": 905,
+                            "line": 1042,
                             "message": ""
                         },
                         {
@@ -538,7 +674,7 @@
                             "column": 23,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 924,
+                            "line": 1061,
                             "message": ""
                         },
                         {
@@ -546,7 +682,7 @@
                             "column": 27,
                             "durationMicroseconds": 0,
                             "functionName": "wrapMode",
-                            "line": 927,
+                            "line": 1064,
                             "message": ""
                         },
                         {
@@ -554,7 +690,7 @@
                             "column": 23,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 933,
+                            "line": 1070,
                             "message": ""
                         },
                         {
@@ -562,7 +698,7 @@
                             "column": 27,
                             "durationMicroseconds": 0,
                             "functionName": "wrapMode",
-                            "line": 935,
+                            "line": 1072,
                             "message": ""
                         },
                         {
@@ -570,7 +706,7 @@
                             "column": 24,
                             "durationMicroseconds": 0,
                             "functionName": "y",
-                            "line": 949,
+                            "line": 1086,
                             "message": ""
                         },
                         {
@@ -578,7 +714,7 @@
                             "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 952,
+                            "line": 1089,
                             "message": ""
                         },
                         {
@@ -586,7 +722,7 @@
                             "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 958,
+                            "line": 1095,
                             "message": ""
                         },
                         {
@@ -594,7 +730,7 @@
                             "column": 43,
                             "durationMicroseconds": 0,
                             "functionName": "centerIn",
-                            "line": 956,
+                            "line": 1093,
                             "message": ""
                         },
                         {
@@ -602,7 +738,7 @@
                             "column": 34,
                             "durationMicroseconds": 0,
                             "functionName": "leftPadding",
-                            "line": 964,
+                            "line": 1101,
                             "message": ""
                         },
                         {
@@ -610,7 +746,7 @@
                             "column": 27,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 966,
+                            "line": 1103,
                             "message": ""
                         },
                         {
@@ -618,7 +754,7 @@
                             "column": 27,
                             "durationMicroseconds": 0,
                             "functionName": "font",
-                            "line": 967,
+                            "line": 1104,
                             "message": ""
                         },
                         {
@@ -626,7 +762,7 @@
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "verticalAlignment",
-                            "line": 968,
+                            "line": 1105,
                             "message": ""
                         },
                         {
@@ -634,7 +770,7 @@
                             "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 982,
+                            "line": 1119,
                             "message": ""
                         },
                         {
@@ -642,7 +778,7 @@
                             "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 990,
+                            "line": 1127,
                             "message": ""
                         },
                         {
@@ -650,7 +786,7 @@
                             "column": 20,
                             "durationMicroseconds": 0,
                             "functionName": "sequences",
-                            "line": 997,
+                            "line": 1134,
                             "message": ""
                         },
                         {
@@ -658,7 +794,7 @@
                             "column": 22,
                             "durationMicroseconds": 0,
                             "functionName": "onActivated",
-                            "line": 998,
+                            "line": 1135,
                             "message": ""
                         },
                         {
@@ -666,7 +802,7 @@
                             "column": 20,
                             "durationMicroseconds": 0,
                             "functionName": "sequences",
-                            "line": 1002,
+                            "line": 1139,
                             "message": ""
                         },
                         {
@@ -674,7 +810,7 @@
                             "column": 22,
                             "durationMicroseconds": 0,
                             "functionName": "onActivated",
-                            "line": 1003,
+                            "line": 1140,
                             "message": ""
                         },
                         {
@@ -682,7 +818,7 @@
                             "column": 23,
                             "durationMicroseconds": 0,
                             "functionName": "fill",
-                            "line": 1007,
+                            "line": 1144,
                             "message": ""
                         },
                         {
@@ -690,7 +826,7 @@
                             "column": 27,
                             "durationMicroseconds": 0,
                             "functionName": "fill",
-                            "line": 1011,
+                            "line": 1148,
                             "message": ""
                         },
                         {
@@ -698,7 +834,7 @@
                             "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "fill",
-                            "line": 1022,
+                            "line": 1159,
                             "message": ""
                         },
                         {
@@ -706,7 +842,7 @@
                             "column": 34,
                             "durationMicroseconds": 0,
                             "functionName": "enabled",
-                            "line": 1029,
+                            "line": 1166,
                             "message": "Cannot load property length from (component in /Users/anastasiashirsova/Desktop/DBSCAN/Main.qml)::undoStack with type QVariant."
                         },
                         {
@@ -714,7 +850,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 1030,
+                            "line": 1167,
                             "message": ""
                         },
                         {
@@ -722,7 +858,7 @@
                             "column": 34,
                             "durationMicroseconds": 0,
                             "functionName": "enabled",
-                            "line": 1035,
+                            "line": 1172,
                             "message": "Cannot load property length from (component in /Users/anastasiashirsova/Desktop/DBSCAN/Main.qml)::redoStack with type QVariant."
                         },
                         {
@@ -730,7 +866,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 1036,
+                            "line": 1173,
                             "message": ""
                         },
                         {
@@ -738,7 +874,7 @@
                             "column": 34,
                             "durationMicroseconds": 0,
                             "functionName": "enabled",
-                            "line": 1041,
+                            "line": 1178,
                             "message": "Cannot load property length from (component in /Users/anastasiashirsova/Desktop/DBSCAN/Main.qml)::points with type QVariant."
                         },
                         {
@@ -746,7 +882,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 1042,
+                            "line": 1179,
                             "message": "Cannot generate efficient code for call to untyped JavaScript function"
                         },
                         {
@@ -754,7 +890,7 @@
                             "column": 34,
                             "durationMicroseconds": 0,
                             "functionName": "enabled",
-                            "line": 1047,
+                            "line": 1184,
                             "message": ""
                         },
                         {
@@ -762,7 +898,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 1048,
+                            "line": 1185,
                             "message": ""
                         },
                         {
@@ -770,7 +906,7 @@
                             "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 1053,
+                            "line": 1190,
                             "message": ""
                         },
                         {
@@ -778,7 +914,7 @@
                             "column": 34,
                             "durationMicroseconds": 0,
                             "functionName": "enabled",
-                            "line": 1054,
+                            "line": 1191,
                             "message": ""
                         },
                         {
@@ -786,7 +922,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 1055,
+                            "line": 1192,
                             "message": ""
                         },
                         {
@@ -794,7 +930,7 @@
                             "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 1067,
+                            "line": 1204,
                             "message": ""
                         },
                         {
@@ -802,15 +938,15 @@
                             "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 1073,
+                            "line": 1210,
                             "message": "Cannot load property length from (component in /Users/anastasiashirsova/Desktop/DBSCAN/Main.qml)::points with type QVariant."
                         },
                         {
                             "codegenResult": 2,
                             "column": 34,
-                            "durationMicroseconds": 9000,
+                            "durationMicroseconds": 21000,
                             "functionName": "onPaint",
-                            "line": 1100,
+                            "line": 1237,
                             "message": "Cannot load property length from (component in /Users/anastasiashirsova/Desktop/DBSCAN/Main.qml)::points with type QVariant."
                         },
                         {
@@ -818,7 +954,7 @@
                             "column": 39,
                             "durationMicroseconds": 0,
                             "functionName": "fill",
-                            "line": 1097,
+                            "line": 1234,
                             "message": ""
                         },
                         {
@@ -826,7 +962,7 @@
                             "column": 42,
                             "durationMicroseconds": 0,
                             "functionName": "acceptedButtons",
-                            "line": 1185,
+                            "line": 1375,
                             "message": ""
                         },
                         {
@@ -834,7 +970,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 1188,
+                            "line": 1378,
                             "message": "Cannot generate efficient code for call to untyped JavaScript function"
                         },
                         {
@@ -842,7 +978,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 1188,
+                            "line": 1378,
                             "message": ""
                         },
                         {
@@ -850,7 +986,7 @@
                             "column": 39,
                             "durationMicroseconds": 0,
                             "functionName": "fill",
-                            "line": 1184,
+                            "line": 1374,
                             "message": ""
                         },
                         {
@@ -858,7 +994,7 @@
                             "column": 39,
                             "durationMicroseconds": 0,
                             "functionName": "fill",
-                            "line": 1227,
+                            "line": 1417,
                             "message": ""
                         },
                         {
@@ -866,7 +1002,7 @@
                             "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 1233,
+                            "line": 1423,
                             "message": ""
                         },
                         {
@@ -874,7 +1010,7 @@
                             "column": 38,
                             "durationMicroseconds": 0,
                             "functionName": "enabled",
-                            "line": 1234,
+                            "line": 1424,
                             "message": "Cannot load property length from (component in /Users/anastasiashirsova/Desktop/DBSCAN/Main.qml)::points with type QVariant."
                         },
                         {
@@ -882,7 +1018,7 @@
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 1235,
+                            "line": 1425,
                             "message": "Cannot generate efficient code for call to untyped JavaScript function"
                         },
                         {
@@ -890,7 +1026,7 @@
                             "column": 38,
                             "durationMicroseconds": 0,
                             "functionName": "enabled",
-                            "line": 1241,
+                            "line": 1431,
                             "message": ""
                         },
                         {
@@ -898,7 +1034,7 @@
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 1242,
+                            "line": 1432,
                             "message": ""
                         },
                         {
@@ -906,7 +1042,7 @@
                             "column": 38,
                             "durationMicroseconds": 0,
                             "functionName": "enabled",
-                            "line": 1248,
+                            "line": 1438,
                             "message": ""
                         },
                         {
@@ -914,7 +1050,7 @@
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 1249,
+                            "line": 1439,
                             "message": ""
                         },
                         {
@@ -922,7 +1058,7 @@
                             "column": 38,
                             "durationMicroseconds": 0,
                             "functionName": "enabled",
-                            "line": 1259,
+                            "line": 1449,
                             "message": ""
                         },
                         {
@@ -930,7 +1066,7 @@
                             "column": 42,
                             "durationMicroseconds": 0,
                             "functionName": "enabled",
-                            "line": 1267,
+                            "line": 1457,
                             "message": ""
                         },
                         {
@@ -938,7 +1074,7 @@
                             "column": 42,
                             "durationMicroseconds": 0,
                             "functionName": "enabled",
-                            "line": 1275,
+                            "line": 1465,
                             "message": ""
                         },
                         {
@@ -946,7 +1082,7 @@
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "model",
-                            "line": 1276,
+                            "line": 1466,
                             "message": "Cannot generate efficient code for storing an array in a non-sequence type"
                         },
                         {
@@ -954,7 +1090,7 @@
                             "column": 55,
                             "durationMicroseconds": 0,
                             "functionName": "onCurrentTextChanged",
-                            "line": 1279,
+                            "line": 1469,
                             "message": ""
                         },
                         {
@@ -962,7 +1098,7 @@
                             "column": 51,
                             "durationMicroseconds": 0,
                             "functionName": "alignment",
-                            "line": 1274,
+                            "line": 1464,
                             "message": ""
                         },
                         {
@@ -970,7 +1106,7 @@
                             "column": 56,
                             "durationMicroseconds": 0,
                             "functionName": "onCompleted",
-                            "line": 1283,
+                            "line": 1473,
                             "message": ""
                         },
                         {
@@ -978,7 +1114,7 @@
                             "column": 38,
                             "durationMicroseconds": 0,
                             "functionName": "enabled",
-                            "line": 1293,
+                            "line": 1483,
                             "message": ""
                         },
                         {
@@ -986,7 +1122,7 @@
                             "column": 38,
                             "durationMicroseconds": 0,
                             "functionName": "enabled",
-                            "line": 1302,
+                            "line": 1492,
                             "message": ""
                         },
                         {
@@ -994,7 +1130,7 @@
                             "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 1316,
+                            "line": 1506,
                             "message": "Cannot access value for name selectedClusterId"
                         },
                         {
@@ -1002,7 +1138,15 @@
                             "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "fill",
-                            "line": 1322,
+                            "line": 1512,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 34,
+                            "durationMicroseconds": 0,
+                            "functionName": "visible",
+                            "line": 1518,
                             "message": ""
                         },
                         {
@@ -1010,7 +1154,7 @@
                             "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 1330,
+                            "line": 1521,
                             "message": ""
                         },
                         {
@@ -1018,7 +1162,231 @@
                             "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "elide",
-                            "line": 1332,
+                            "line": 1523,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 34,
+                            "durationMicroseconds": 0,
+                            "functionName": "visible",
+                            "line": 1527,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 31,
+                            "durationMicroseconds": 0,
+                            "functionName": "text",
+                            "line": 1529,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 32,
+                            "durationMicroseconds": 0,
+                            "functionName": "elide",
+                            "line": 1531,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 34,
+                            "durationMicroseconds": 0,
+                            "functionName": "visible",
+                            "line": 1535,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 31,
+                            "durationMicroseconds": 0,
+                            "functionName": "text",
+                            "line": 1536,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 34,
+                            "durationMicroseconds": 0,
+                            "functionName": "checked",
+                            "line": 1537,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 36,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 1538,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 34,
+                            "durationMicroseconds": 0,
+                            "functionName": "visible",
+                            "line": 1542,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 31,
+                            "durationMicroseconds": 0,
+                            "functionName": "text",
+                            "line": 1543,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 34,
+                            "durationMicroseconds": 0,
+                            "functionName": "checked",
+                            "line": 1544,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 36,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 1545,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 34,
+                            "durationMicroseconds": 0,
+                            "functionName": "visible",
+                            "line": 1549,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 31,
+                            "durationMicroseconds": 0,
+                            "functionName": "text",
+                            "line": 1550,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 34,
+                            "durationMicroseconds": 0,
+                            "functionName": "checked",
+                            "line": 1551,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 36,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 1552,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 34,
+                            "durationMicroseconds": 0,
+                            "functionName": "visible",
+                            "line": 1556,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 34,
+                            "durationMicroseconds": 0,
+                            "functionName": "visible",
+                            "line": 1561,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 31,
+                            "durationMicroseconds": 0,
+                            "functionName": "text",
+                            "line": 1562,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 34,
+                            "durationMicroseconds": 0,
+                            "functionName": "checked",
+                            "line": 1563,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 36,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 1564,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 34,
+                            "durationMicroseconds": 0,
+                            "functionName": "visible",
+                            "line": 1568,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 31,
+                            "durationMicroseconds": 0,
+                            "functionName": "text",
+                            "line": 1570,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 32,
+                            "durationMicroseconds": 0,
+                            "functionName": "elide",
+                            "line": 1572,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 34,
+                            "durationMicroseconds": 0,
+                            "functionName": "visible",
+                            "line": 1576,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 31,
+                            "durationMicroseconds": 0,
+                            "functionName": "text",
+                            "line": 1577,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 34,
+                            "durationMicroseconds": 0,
+                            "functionName": "checked",
+                            "line": 1578,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 36,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 1579,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 34,
+                            "durationMicroseconds": 0,
+                            "functionName": "visible",
+                            "line": 1583,
                             "message": ""
                         },
                         {
@@ -1026,7 +1394,7 @@
                             "column": 22,
                             "durationMicroseconds": 0,
                             "functionName": "focusPolicy",
-                            "line": 1345,
+                            "line": 1597,
                             "message": ""
                         },
                         {
@@ -1034,7 +1402,7 @@
                             "column": 20,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 1348,
+                            "line": 1600,
                             "message": ""
                         },
                         {
@@ -1042,7 +1410,7 @@
                             "column": 19,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 1349,
+                            "line": 1601,
                             "message": ""
                         },
                         {
@@ -1050,7 +1418,7 @@
                             "column": 19,
                             "durationMicroseconds": 0,
                             "functionName": "font",
-                            "line": 1350,
+                            "line": 1602,
                             "message": ""
                         },
                         {
@@ -1058,7 +1426,7 @@
                             "column": 34,
                             "durationMicroseconds": 0,
                             "functionName": "horizontalAlignment",
-                            "line": 1351,
+                            "line": 1603,
                             "message": ""
                         },
                         {
@@ -1066,7 +1434,7 @@
                             "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "verticalAlignment",
-                            "line": 1352,
+                            "line": 1604,
                             "message": ""
                         },
                         {
@@ -1074,7 +1442,7 @@
                             "column": 20,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 1357,
+                            "line": 1609,
                             "message": ""
                         },
                         {
@@ -1082,7 +1450,15 @@
                             "column": 27,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 1358,
+                            "line": 1610,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 24,
+                            "durationMicroseconds": 0,
+                            "functionName": "implicitWidth",
+                            "line": 1619,
                             "message": ""
                         },
                         {
@@ -1090,15 +1466,7 @@
                             "column": 22,
                             "durationMicroseconds": 0,
                             "functionName": "focusPolicy",
-                            "line": 1368,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 20,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 1371,
+                            "line": 1622,
                             "message": ""
                         },
                         {
@@ -1106,7 +1474,7 @@
                             "column": 19,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 1372,
+                            "line": 1626,
                             "message": ""
                         },
                         {
@@ -1114,7 +1482,7 @@
                             "column": 19,
                             "durationMicroseconds": 0,
                             "functionName": "font",
-                            "line": 1373,
+                            "line": 1627,
                             "message": ""
                         },
                         {
@@ -1122,7 +1490,7 @@
                             "column": 34,
                             "durationMicroseconds": 0,
                             "functionName": "horizontalAlignment",
-                            "line": 1374,
+                            "line": 1628,
                             "message": ""
                         },
                         {
@@ -1130,63 +1498,7 @@
                             "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "verticalAlignment",
-                            "line": 1375,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 20,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 1380,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 27,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 1381,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 22,
-                            "durationMicroseconds": 0,
-                            "functionName": "focusPolicy",
-                            "line": 1391,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 20,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 1396,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 19,
-                            "durationMicroseconds": 0,
-                            "functionName": "text",
-                            "line": 1397,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 19,
-                            "durationMicroseconds": 0,
-                            "functionName": "font",
-                            "line": 1398,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 32,
-                            "durationMicroseconds": 0,
-                            "functionName": "verticalAlignment",
-                            "line": 1399,
+                            "line": 1629,
                             "message": ""
                         },
                         {
@@ -1194,7 +1506,135 @@
                             "column": 20,
                             "durationMicroseconds": 0,
                             "functionName": "elide",
-                            "line": 1400,
+                            "line": 1630,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 20,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 1635,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 27,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 1636,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 22,
+                            "durationMicroseconds": 0,
+                            "functionName": "focusPolicy",
+                            "line": 1646,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 20,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 1649,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 19,
+                            "durationMicroseconds": 0,
+                            "functionName": "text",
+                            "line": 1650,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 19,
+                            "durationMicroseconds": 0,
+                            "functionName": "font",
+                            "line": 1651,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 34,
+                            "durationMicroseconds": 0,
+                            "functionName": "horizontalAlignment",
+                            "line": 1652,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 32,
+                            "durationMicroseconds": 0,
+                            "functionName": "verticalAlignment",
+                            "line": 1653,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 20,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 1658,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 27,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 1659,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 22,
+                            "durationMicroseconds": 0,
+                            "functionName": "focusPolicy",
+                            "line": 1669,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 20,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 1674,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 19,
+                            "durationMicroseconds": 0,
+                            "functionName": "text",
+                            "line": 1675,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 19,
+                            "durationMicroseconds": 0,
+                            "functionName": "font",
+                            "line": 1676,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 32,
+                            "durationMicroseconds": 0,
+                            "functionName": "verticalAlignment",
+                            "line": 1677,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 20,
+                            "durationMicroseconds": 0,
+                            "functionName": "elide",
+                            "line": 1678,
                             "message": ""
                         },
                         {
@@ -1202,7 +1642,7 @@
                             "column": 16,
                             "durationMicroseconds": 0,
                             "functionName": "x",
-                            "line": 1404,
+                            "line": 1682,
                             "message": ""
                         },
                         {
@@ -1210,7 +1650,7 @@
                             "column": 16,
                             "durationMicroseconds": 0,
                             "functionName": "y",
-                            "line": 1405,
+                            "line": 1683,
                             "message": ""
                         },
                         {
@@ -1218,7 +1658,7 @@
                             "column": 20,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 1406,
+                            "line": 1684,
                             "message": ""
                         },
                         {
@@ -1226,7 +1666,7 @@
                             "column": 20,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 1413,
+                            "line": 1691,
                             "message": ""
                         },
                         {
@@ -1234,7 +1674,7 @@
                             "column": 27,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 1414,
+                            "line": 1692,
                             "message": ""
                         },
                         {
@@ -1242,7 +1682,7 @@
                             "column": 16,
                             "durationMicroseconds": 0,
                             "functionName": "y",
-                            "line": 1419,
+                            "line": 1697,
                             "message": ""
                         },
                         {
@@ -1250,7 +1690,7 @@
                             "column": 20,
                             "durationMicroseconds": 0,
                             "functionName": "width",
-                            "line": 1420,
+                            "line": 1698,
                             "message": ""
                         },
                         {
@@ -1258,7 +1698,7 @@
                             "column": 29,
                             "durationMicroseconds": 0,
                             "functionName": "implicitHeight",
-                            "line": 1421,
+                            "line": 1699,
                             "message": ""
                         },
                         {
@@ -1266,7 +1706,7 @@
                             "column": 33,
                             "durationMicroseconds": 0,
                             "functionName": "implicitHeight",
-                            "line": 1426,
+                            "line": 1704,
                             "message": ""
                         },
                         {
@@ -1274,7 +1714,7 @@
                             "column": 24,
                             "durationMicroseconds": 0,
                             "functionName": "model",
-                            "line": 1427,
+                            "line": 1705,
                             "message": ""
                         },
                         {
@@ -1282,7 +1722,7 @@
                             "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "currentIndex",
-                            "line": 1428,
+                            "line": 1706,
                             "message": ""
                         },
                         {
@@ -1290,7 +1730,7 @@
                             "column": 20,
                             "durationMicroseconds": 0,
                             "functionName": "width",
-                            "line": 1440,
+                            "line": 1718,
                             "message": "Cannot access value for name control"
                         },
                         {
@@ -1298,7 +1738,7 @@
                             "column": 26,
                             "durationMicroseconds": 0,
                             "functionName": "highlighted",
-                            "line": 1442,
+                            "line": 1720,
                             "message": "Cannot access value for name control"
                         },
                         {
@@ -1306,7 +1746,7 @@
                             "column": 23,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 1445,
+                            "line": 1723,
                             "message": "Cannot access value for name modelData"
                         },
                         {
@@ -1314,7 +1754,7 @@
                             "column": 23,
                             "durationMicroseconds": 0,
                             "functionName": "font",
-                            "line": 1447,
+                            "line": 1725,
                             "message": "Cannot access value for name control"
                         },
                         {
@@ -1322,7 +1762,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "verticalAlignment",
-                            "line": 1448,
+                            "line": 1726,
                             "message": ""
                         },
                         {
@@ -1330,7 +1770,7 @@
                             "column": 24,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 1452,
+                            "line": 1730,
                             "message": "Cannot access value for name highlighted"
                         },
                         {
@@ -1338,7 +1778,7 @@
                             "column": 20,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 1469,
+                            "line": 1747,
                             "message": ""
                         },
                         {
@@ -1346,7 +1786,7 @@
                             "column": 22,
                             "durationMicroseconds": 0,
                             "functionName": "enabled",
-                            "line": 1478,
+                            "line": 1756,
                             "message": ""
                         },
                         {
@@ -1354,7 +1794,7 @@
                             "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "inputMethodHints",
-                            "line": 1483,
+                            "line": 1761,
                             "message": ""
                         },
                         {
@@ -1362,7 +1802,7 @@
                             "column": 24,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 1487,
+                            "line": 1765,
                             "message": ""
                         },
                         {
@@ -1370,7 +1810,7 @@
                             "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 1488,
+                            "line": 1766,
                             "message": ""
                         }
                     ],

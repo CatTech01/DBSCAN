@@ -4,6 +4,24 @@
 #include <QVector>
 #include <QtMath>
 
+namespace {
+double coordinateValue(const QVariantMap &point,
+                       const QString &axis,
+                       const QString &unit,
+                       double pixelsPerCentimeter)
+{
+    if (unit == QStringLiteral("пиксели"))
+        return point.value(axis).toDouble();
+
+    if (unit == QStringLiteral("см"))
+        return point.value(axis).toDouble() / pixelsPerCentimeter;
+
+    return point.value(axis == QStringLiteral("x")
+                       ? QStringLiteral("dataX")
+                       : QStringLiteral("dataY")).toDouble();
+}
+}
+
 ClusterAnalyzer::ClusterAnalyzer(QObject *parent)
     : QObject(parent)
 {
@@ -33,37 +51,38 @@ QVariantMap ClusterAnalyzer::clusterInfo(const QVariantList &points,
 
     int centerIndex = 0;
     double bestDistanceSum = std::numeric_limits<double>::max();
+    double diagonal = 0.0;
+    int diagonalStartIndex = 0;
+    int diagonalEndIndex = 0;
+    QVector<double> distanceX;
+    QVector<double> distanceY;
+
+    distanceX.reserve(clusterPoints.size());
+    distanceY.reserve(clusterPoints.size());
+
+    for (const QVariantMap &point : clusterPoints) {
+        distanceX.append(coordinateValue(point, QStringLiteral("x"), unit, pixelsPerCentimeter));
+        distanceY.append(coordinateValue(point, QStringLiteral("y"), unit, pixelsPerCentimeter));
+    }
 
     for (int i = 0; i < clusterPoints.size(); ++i) {
-        const double x = unit == QStringLiteral("пиксели")
-                ? clusterPoints[i].value(QStringLiteral("x")).toDouble()
-                : unit == QStringLiteral("см")
-                    ? clusterPoints[i].value(QStringLiteral("x")).toDouble() / pixelsPerCentimeter
-                    : clusterPoints[i].value(QStringLiteral("dataX")).toDouble();
-        const double y = unit == QStringLiteral("пиксели")
-                ? clusterPoints[i].value(QStringLiteral("y")).toDouble()
-                : unit == QStringLiteral("см")
-                    ? clusterPoints[i].value(QStringLiteral("y")).toDouble() / pixelsPerCentimeter
-                    : clusterPoints[i].value(QStringLiteral("dataY")).toDouble();
         double distanceSum = 0.0;
 
         for (int j = 0; j < clusterPoints.size(); ++j) {
             if (i == j)
                 continue;
 
-            const double otherX = unit == QStringLiteral("пиксели")
-                    ? clusterPoints[j].value(QStringLiteral("x")).toDouble()
-                    : unit == QStringLiteral("см")
-                        ? clusterPoints[j].value(QStringLiteral("x")).toDouble() / pixelsPerCentimeter
-                        : clusterPoints[j].value(QStringLiteral("dataX")).toDouble();
-            const double otherY = unit == QStringLiteral("пиксели")
-                    ? clusterPoints[j].value(QStringLiteral("y")).toDouble()
-                    : unit == QStringLiteral("см")
-                        ? clusterPoints[j].value(QStringLiteral("y")).toDouble() / pixelsPerCentimeter
-                        : clusterPoints[j].value(QStringLiteral("dataY")).toDouble();
-            const double dx = x - otherX;
-            const double dy = y - otherY;
-            distanceSum += qSqrt(dx * dx + dy * dy);
+            const double dx = distanceX[i] - distanceX[j];
+            const double dy = distanceY[i] - distanceY[j];
+            const double distance = qSqrt(dx * dx + dy * dy);
+
+            distanceSum += distance;
+
+            if (j > i && distance > diagonal) {
+                diagonal = distance;
+                diagonalStartIndex = i;
+                diagonalEndIndex = j;
+            }
         }
 
         if (distanceSum < bestDistanceSum) {
@@ -73,49 +92,47 @@ QVariantMap ClusterAnalyzer::clusterInfo(const QVariantList &points,
     }
 
     const QVariantMap center = clusterPoints[centerIndex];
+    const QVariantMap diagonalStart = clusterPoints[diagonalStartIndex];
+    const QVariantMap diagonalEnd = clusterPoints[diagonalEndIndex];
     const double centerX = center.value(QStringLiteral("dataX")).toDouble();
     const double centerY = center.value(QStringLiteral("dataY")).toDouble();
-    const double centerDistanceX = unit == QStringLiteral("пиксели")
-            ? center.value(QStringLiteral("x")).toDouble()
-            : unit == QStringLiteral("см")
-                ? center.value(QStringLiteral("x")).toDouble() / pixelsPerCentimeter
-                : centerX;
-    const double centerDistanceY = unit == QStringLiteral("пиксели")
-            ? center.value(QStringLiteral("y")).toDouble()
-            : unit == QStringLiteral("см")
-                ? center.value(QStringLiteral("y")).toDouble() / pixelsPerCentimeter
-                : centerY;
+    const double centerDistanceX = distanceX[centerIndex];
+    const double centerDistanceY = distanceY[centerIndex];
     double minDistance = 0.0;
     double maxDistance = 0.0;
+    int minDistanceIndex = centerIndex;
+    int maxDistanceIndex = centerIndex;
     bool hasOtherPoint = false;
 
     for (int i = 0; i < clusterPoints.size(); ++i) {
         if (i == centerIndex)
             continue;
 
-        const double x = unit == QStringLiteral("пиксели")
-                ? clusterPoints[i].value(QStringLiteral("x")).toDouble()
-                : unit == QStringLiteral("см")
-                    ? clusterPoints[i].value(QStringLiteral("x")).toDouble() / pixelsPerCentimeter
-                    : clusterPoints[i].value(QStringLiteral("dataX")).toDouble();
-        const double y = unit == QStringLiteral("пиксели")
-                ? clusterPoints[i].value(QStringLiteral("y")).toDouble()
-                : unit == QStringLiteral("см")
-                    ? clusterPoints[i].value(QStringLiteral("y")).toDouble() / pixelsPerCentimeter
-                    : clusterPoints[i].value(QStringLiteral("dataY")).toDouble();
-        const double dx = centerDistanceX - x;
-        const double dy = centerDistanceY - y;
+        const double dx = centerDistanceX - distanceX[i];
+        const double dy = centerDistanceY - distanceY[i];
         const double distance = qSqrt(dx * dx + dy * dy);
 
         if (!hasOtherPoint) {
             minDistance = distance;
             maxDistance = distance;
+            minDistanceIndex = i;
+            maxDistanceIndex = i;
             hasOtherPoint = true;
         } else {
-            minDistance = qMin(minDistance, distance);
-            maxDistance = qMax(maxDistance, distance);
+            if (distance < minDistance) {
+                minDistance = distance;
+                minDistanceIndex = i;
+            }
+
+            if (distance > maxDistance) {
+                maxDistance = distance;
+                maxDistanceIndex = i;
+            }
         }
     }
+
+    const QVariantMap minDistancePoint = clusterPoints[minDistanceIndex];
+    const QVariantMap maxDistancePoint = clusterPoints[maxDistanceIndex];
 
     return QVariantMap {
         {QStringLiteral("found"), true},
@@ -128,6 +145,15 @@ QVariantMap ClusterAnalyzer::clusterInfo(const QVariantList &points,
         {QStringLiteral("screenY"), center.value(QStringLiteral("y")).toDouble()},
         {QStringLiteral("minDistance"), minDistance},
         {QStringLiteral("maxDistance"), maxDistance},
+        {QStringLiteral("minDistancePointX"), minDistancePoint.value(QStringLiteral("x")).toDouble()},
+        {QStringLiteral("minDistancePointY"), minDistancePoint.value(QStringLiteral("y")).toDouble()},
+        {QStringLiteral("maxDistancePointX"), maxDistancePoint.value(QStringLiteral("x")).toDouble()},
+        {QStringLiteral("maxDistancePointY"), maxDistancePoint.value(QStringLiteral("y")).toDouble()},
+        {QStringLiteral("diagonal"), diagonal},
+        {QStringLiteral("diagonalStartX"), diagonalStart.value(QStringLiteral("x")).toDouble()},
+        {QStringLiteral("diagonalStartY"), diagonalStart.value(QStringLiteral("y")).toDouble()},
+        {QStringLiteral("diagonalEndX"), diagonalEnd.value(QStringLiteral("x")).toDouble()},
+        {QStringLiteral("diagonalEndY"), diagonalEnd.value(QStringLiteral("y")).toDouble()},
         {QStringLiteral("distanceSum"), bestDistanceSum}
     };
 }

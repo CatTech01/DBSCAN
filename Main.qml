@@ -37,6 +37,8 @@ Window {
     property var clusterInfoCache: ({})
     property var distanceInfoCache: ({})
     property string selectedInfoText: "Выберите кластер или аномальную точку"
+    property string selectedClusterMetricMode: "center"
+    property bool showPairDistanceLine: false
     property bool editLocked: false
     property string warningTitle: ""
     property string warningText: ""
@@ -104,6 +106,8 @@ Window {
         selectedClusterCenterY = -1
         selectedItems = []
         selectedInfoText = "Выберите кластер или аномальную точку"
+        selectedClusterMetricMode = "center"
+        showPairDistanceLine = false
     }
 
     function resetAnalysisCache() {
@@ -333,6 +337,7 @@ Window {
         selectedNoisePointIndex = -1
         selectedClusterCenterX = -1
         selectedClusterCenterY = -1
+        showPairDistanceLine = false
 
         for (var i = 0; i < selectedItems.length; ++i) {
             if (selectedItems[i].type === "cluster" && selectedClusterId === 0) {
@@ -354,6 +359,9 @@ Window {
         } else {
             selectedInfoText = "Выберите кластер или аномальную точку"
         }
+
+        if (selectedItems.length !== 1 || selectedItems[0].type !== "cluster")
+            selectedClusterMetricMode = "center"
     }
 
     function rebuildSelectedItemsForCurrentUnit() {
@@ -394,7 +402,7 @@ Window {
                 pendingSelectionAdd = addToSelection
                 showWarning(
                     "Нужно немного подождать",
-                    "В выбранном кластере много точек. Чтобы найти центр и расстояния, программе нужно время. Ничего страшного не случится, просто нужно немного подождать. Продолжить?",
+                    "В выбранном кластере много точек. Чтобы найти центр, диагональ и расстояния, программе нужно время. Ничего страшного не случится, просто нужно немного подождать. Продолжить?",
                     "clusterSelection"
                 )
                 return true
@@ -435,6 +443,8 @@ Window {
             selectedItems = [item]
         }
 
+        selectedClusterMetricMode = "center"
+        showPairDistanceLine = false
         updateSelectionState()
         refreshCanvas()
         return true
@@ -512,6 +522,47 @@ Window {
                 + "    Центр: (" + formatNumber(info.centerX) + "; " + formatNumber(info.centerY) + ")"
                 + "    Мин. расстояние (" + epsilonUnit + "): " + formatNumber(info.minDistance)
                 + "    Макс. расстояние (" + epsilonUnit + "): " + formatNumber(info.maxDistance)
+                + "    Диагональ (" + epsilonUnit + "): " + formatNumber(info.diagonal)
+    }
+
+    function hasSingleClusterSelection() {
+        return selectedItems.length === 1 && selectedItems[0].type === "cluster"
+    }
+
+    function hasPairSelection() {
+        return selectedItems.length === 2
+    }
+
+    function selectedClusterInfo() {
+        if (!hasSingleClusterSelection())
+            return ({ "found": false })
+
+        return getClusterInfo(selectedItems[0].id)
+    }
+
+    function selectClusterCenter() {
+        selectedClusterMetricMode = "center"
+        refreshCanvas()
+    }
+
+    function selectClusterDiagonal() {
+        selectedClusterMetricMode = "diagonal"
+        refreshCanvas()
+    }
+
+    function selectClusterMinDistance() {
+        selectedClusterMetricMode = "minDistance"
+        refreshCanvas()
+    }
+
+    function selectClusterMaxDistance() {
+        selectedClusterMetricMode = "maxDistance"
+        refreshCanvas()
+    }
+
+    function togglePairDistanceLine() {
+        showPairDistanceLine = !showPairDistanceLine
+        refreshCanvas()
     }
 
     function noiseInfoText(index) {
@@ -542,6 +593,80 @@ Window {
         }
 
         return "Расстояние между аномалиями (" + epsilonUnit + "): " + formatNumber(distance)
+    }
+
+    function selectedClusterBaseText() {
+        if (!hasSingleClusterSelection())
+            return ""
+
+        var info = selectedClusterInfo()
+
+        if (!info.found)
+            return ""
+
+        return "Кластер " + selectedItems[0].id + "    Точек: " + info.count
+    }
+
+    function selectedClusterCenterText() {
+        var info = selectedClusterInfo()
+
+        if (!info.found)
+            return "Центр: —"
+
+        return "Центр: (" + formatNumber(info.centerX) + "; " + formatNumber(info.centerY) + ")"
+    }
+
+    function selectedClusterMinDistanceText() {
+        var info = selectedClusterInfo()
+
+        if (!info.found)
+            return "Мин. расстояние: —"
+
+        return "Мин. расстояние (" + epsilonUnit + "): " + formatNumber(info.minDistance)
+    }
+
+    function selectedClusterMaxDistanceText() {
+        var info = selectedClusterInfo()
+
+        if (!info.found)
+            return "Макс. расстояние: —"
+
+        return "Макс. расстояние (" + epsilonUnit + "): " + formatNumber(info.maxDistance)
+    }
+
+    function selectedClusterDiagonalText() {
+        var info = selectedClusterInfo()
+
+        if (!info.found)
+            return "Диагональ: —"
+
+        return "Диагональ (" + epsilonUnit + "): " + formatNumber(info.diagonal)
+    }
+
+    function pairDistanceCaption() {
+        if (!hasPairSelection())
+            return ""
+
+        var first = selectedItems[0]
+        var second = selectedItems[1]
+
+        if (first.type === "cluster" && second.type === "cluster")
+            return "Расстояние между центрами кластеров " + first.id + " и " + second.id + " (" + epsilonUnit + "):"
+
+        if (first.type === "cluster" && second.type === "noise")
+            return "Расстояние между центром кластера " + first.id + " и аномалией (" + epsilonUnit + "):"
+
+        if (first.type === "noise" && second.type === "cluster")
+            return "Расстояние между аномалией и центром кластера " + second.id + " (" + epsilonUnit + "):"
+
+        return "Расстояние между аномалиями (" + epsilonUnit + "):"
+    }
+
+    function pairDistanceValueText() {
+        if (!hasPairSelection())
+            return "—"
+
+        return formatNumber(distanceBetween(selectedItems[0], selectedItems[1]))
     }
 
     function isNoiseSelected(index) {
@@ -690,11 +815,7 @@ Window {
         } else if (step.type === "finish") {
             currentPointIndex = -1
             currentClusterId = 0
-            selectedClusterId = 0
-            selectedNoisePointIndex = -1
-            selectedClusterCenterX = -1
-            selectedClusterCenterY = -1
-            selectedInfoText = "Выберите кластер или аномальную точку"
+            clearSelection()
             dbscanRunning = false
             dbscanTimer.stop()
             statusText = "Готово: кластеров " + step.clusters
@@ -749,11 +870,7 @@ Window {
             setPoints(result.points)
             currentPointIndex = -1
             currentClusterId = 0
-            selectedClusterId = 0
-            selectedNoisePointIndex = -1
-            selectedClusterCenterX = -1
-            selectedClusterCenterY = -1
-            selectedInfoText = "Выберите кластер или аномальную точку"
+            clearSelection()
             dbscanRunning = false
             dbscanSteps = []
             dbscanStepIndex = 0
@@ -871,6 +988,26 @@ Window {
             else
                 context.lineTo(pointX, pointY)
         }
+    }
+
+    function drawWhiteConnection(context, x1, y1, x2, y2) {
+        context.beginPath()
+        context.moveTo(x1, y1)
+        context.lineTo(x2, y2)
+        context.lineWidth = 2.2
+        context.strokeStyle = "#ffffff"
+        context.globalAlpha = 0.95
+        context.stroke()
+        context.globalAlpha = 1
+    }
+
+    function drawHighlightedPoint(context, x, y) {
+        context.beginPath()
+        context.arc(x, y, pointRadius * 1.8, 0, Math.PI * 2)
+        context.lineWidth = 2.4
+        context.fillStyle = "rgba(255, 255, 255, 0)"
+        context.strokeStyle = "#ffffff"
+        context.stroke()
     }
 
     Timer {
@@ -1162,8 +1299,61 @@ Window {
                                 }
                             }
 
+                            if (root.hasSingleClusterSelection() && root.selectedClusterMetricMode === "diagonal") {
+                                var diagonalInfo = root.selectedClusterInfo()
+
+                                if (diagonalInfo.found) {
+                                    root.drawWhiteConnection(context,
+                                                             diagonalInfo.diagonalStartX,
+                                                             diagonalInfo.diagonalStartY,
+                                                             diagonalInfo.diagonalEndX,
+                                                             diagonalInfo.diagonalEndY)
+                                    root.drawHighlightedPoint(context, diagonalInfo.diagonalStartX, diagonalInfo.diagonalStartY)
+                                    root.drawHighlightedPoint(context, diagonalInfo.diagonalEndX, diagonalInfo.diagonalEndY)
+                                }
+                            }
+
+                            if (root.hasSingleClusterSelection() && root.selectedClusterMetricMode === "minDistance") {
+                                var minDistanceInfo = root.selectedClusterInfo()
+
+                                if (minDistanceInfo.found) {
+                                    root.drawWhiteConnection(context,
+                                                             minDistanceInfo.screenX,
+                                                             minDistanceInfo.screenY,
+                                                             minDistanceInfo.minDistancePointX,
+                                                             minDistanceInfo.minDistancePointY)
+                                    root.drawHighlightedPoint(context, minDistanceInfo.screenX, minDistanceInfo.screenY)
+                                    root.drawHighlightedPoint(context, minDistanceInfo.minDistancePointX, minDistanceInfo.minDistancePointY)
+                                }
+                            }
+
+                            if (root.hasSingleClusterSelection() && root.selectedClusterMetricMode === "maxDistance") {
+                                var maxDistanceInfo = root.selectedClusterInfo()
+
+                                if (maxDistanceInfo.found) {
+                                    root.drawWhiteConnection(context,
+                                                             maxDistanceInfo.screenX,
+                                                             maxDistanceInfo.screenY,
+                                                             maxDistanceInfo.maxDistancePointX,
+                                                             maxDistanceInfo.maxDistancePointY)
+                                    root.drawHighlightedPoint(context, maxDistanceInfo.screenX, maxDistanceInfo.screenY)
+                                    root.drawHighlightedPoint(context, maxDistanceInfo.maxDistancePointX, maxDistanceInfo.maxDistancePointY)
+                                }
+                            }
+
+                            if (root.showPairDistanceLine && root.selectedItems.length === 2) {
+                                root.drawWhiteConnection(context,
+                                                         root.selectedItems[0].screenX,
+                                                         root.selectedItems[0].screenY,
+                                                         root.selectedItems[1].screenX,
+                                                         root.selectedItems[1].screenY)
+                            }
+
                             for (var centerIndex = 0; centerIndex < root.points.length; ++centerIndex) {
                                 var centerPoint = root.points[centerIndex]
+
+                                if (root.hasSingleClusterSelection() && root.selectedClusterMetricMode !== "center")
+                                    continue
 
                                 if (!root.isSelectedClusterCenter(centerPoint))
                                     continue
@@ -1325,11 +1515,73 @@ Window {
                     spacing: 12
 
                     Label {
+                        visible: !root.hasSingleClusterSelection() && !root.hasPairSelection()
                         Layout.fillWidth: true
                         color: "#f2f2f2"
                         text: root.selectedInfoText
                         font.pixelSize: 14
                         elide: Text.ElideRight
+                    }
+
+                    Label {
+                        visible: root.hasSingleClusterSelection()
+                        color: "#f2f2f2"
+                        text: root.selectedClusterBaseText()
+                        font.pixelSize: 14
+                        elide: Text.ElideRight
+                    }
+
+                    InfoValueButton {
+                        visible: root.hasSingleClusterSelection()
+                        text: root.selectedClusterCenterText()
+                        checked: root.selectedClusterMetricMode === "center"
+                        onClicked: root.selectClusterCenter()
+                    }
+
+                    InfoValueButton {
+                        visible: root.hasSingleClusterSelection()
+                        text: root.selectedClusterMinDistanceText()
+                        checked: root.selectedClusterMetricMode === "minDistance"
+                        onClicked: root.selectClusterMinDistance()
+                    }
+
+                    InfoValueButton {
+                        visible: root.hasSingleClusterSelection()
+                        text: root.selectedClusterMaxDistanceText()
+                        checked: root.selectedClusterMetricMode === "maxDistance"
+                        onClicked: root.selectClusterMaxDistance()
+                    }
+
+                    Item {
+                        visible: root.hasSingleClusterSelection()
+                        Layout.fillWidth: true
+                    }
+
+                    InfoValueButton {
+                        visible: root.hasSingleClusterSelection()
+                        text: root.selectedClusterDiagonalText()
+                        checked: root.selectedClusterMetricMode === "diagonal"
+                        onClicked: root.selectClusterDiagonal()
+                    }
+
+                    Label {
+                        visible: root.hasPairSelection()
+                        color: "#f2f2f2"
+                        text: root.pairDistanceCaption()
+                        font.pixelSize: 14
+                        elide: Text.ElideRight
+                    }
+
+                    InfoValueButton {
+                        visible: root.hasPairSelection()
+                        text: root.pairDistanceValueText()
+                        checked: root.showPairDistanceLine
+                        onClicked: root.togglePairDistanceLine()
+                    }
+
+                    Item {
+                        visible: root.hasPairSelection()
+                        Layout.fillWidth: true
                     }
                 }
             }
@@ -1356,6 +1608,32 @@ Window {
             radius: 6
             color: control.enabled ? (control.down ? "#2a2a2a" : control.hovered ? "#222222" : "#141414") : "#0d0d0d"
             border.color: control.enabled ? "#4a4a4a" : "#242424"
+            border.width: 1
+        }
+    }
+
+    component InfoValueButton: Button {
+        id: control
+
+        implicitHeight: 28
+        implicitWidth: Math.max(84, contentItem.implicitWidth + 18)
+        padding: 0
+        font.pixelSize: 14
+        focusPolicy: Qt.NoFocus
+
+        contentItem: Text {
+            color: "#ffffff"
+            text: control.text
+            font: control.font
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
+            elide: Text.ElideRight
+        }
+
+        background: Rectangle {
+            radius: 6
+            color: control.checked ? "#262626" : control.hovered ? "#1b1b1b" : "#101010"
+            border.color: control.checked ? "#ffffff" : "#555555"
             border.width: 1
         }
     }
