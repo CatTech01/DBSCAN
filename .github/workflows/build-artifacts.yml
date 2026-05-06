@@ -1,0 +1,83 @@
+name: Build application artifacts
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  build-macos:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: '6.10.0'
+          modules: 'qtdeclarative'
+
+      - name: Configure
+        run: cmake -S . -B build/macos-release -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build
+        run: cmake --build build/macos-release --config Release
+
+      - name: Deploy Qt libraries
+        run: macdeployqt build/macos-release/appDBSCAN.app -qmldir=.
+
+      - name: Create archive
+        run: ditto -c -k --sequesterRsrc --keepParent build/macos-release/appDBSCAN.app DBSCAN-Visualizer-macOS.zip
+
+      - name: Upload macOS artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: DBSCAN-Visualizer-macOS
+          path: DBSCAN-Visualizer-macOS.zip
+
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: '6.10.0'
+          modules: 'qtdeclarative'
+
+      - name: Configure
+        run: cmake -S . -B build/windows-release
+
+      - name: Build
+        run: cmake --build build/windows-release --config Release
+
+      - name: Deploy Qt libraries
+        shell: pwsh
+        run: |
+          $exe = "build/windows-release/Release/appDBSCAN.exe"
+          if (!(Test-Path $exe)) {
+            $exe = "build/windows-release/appDBSCAN.exe"
+          }
+          windeployqt $exe
+
+      - name: Create archive
+        shell: pwsh
+        run: |
+          $appDir = "build/windows-release/Release"
+          if (!(Test-Path "$appDir/appDBSCAN.exe")) {
+            $appDir = "build/windows-release"
+          }
+          Compress-Archive -Path "$appDir/*" -DestinationPath "DBSCAN-Visualizer-Windows.zip" -Force
+
+      - name: Upload Windows artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: DBSCAN-Visualizer-Windows
+          path: DBSCAN-Visualizer-Windows.zip

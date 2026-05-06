@@ -31,7 +31,9 @@ ui_*.h
 *.jsc
 Makefile*
 *build-*
+!.github/workflows/build-artifacts.yml
 build/
+release/
 DBSCAN-Visualizer.app
 *.qm
 *.prl

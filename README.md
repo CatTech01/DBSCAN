@@ -25,6 +25,15 @@ DBSCAN-Visualizer.app
 build/desktop
 ```
 
+Готовый архив для macOS можно собрать командой:
+
+```bash
+cmake -S . -B build/macos-release -DCMAKE_BUILD_TYPE=Release
+cmake --build build/macos-release --config Release
+macdeployqt build/macos-release/appDBSCAN.app -qmldir=.
+ditto -c -k --sequesterRsrc --keepParent build/macos-release/appDBSCAN.app DBSCAN-Visualizer-macOS.zip
+```
+
 ## Как собрать и открыть на Windows
 
 ### Вариант 1: через Qt Creator
@@ -57,3 +66,18 @@ build/windows/Release/appDBSCAN.exe
 ```
 
 Если `.exe` не запускается двойным кликом, откройте проект через Qt Creator.
+
+## Готовые сборки через GitHub
+
+В проект добавлен GitHub Actions workflow:
+
+```text
+.github/workflows/build-artifacts.yml
+```
+
+Он собирает архивы для macOS и Windows. После запуска workflow готовые файлы можно скачать во вкладке `Actions` на GitHub:
+
+```text
+DBSCAN-Visualizer-macOS
+DBSCAN-Visualizer-Windows
+```
