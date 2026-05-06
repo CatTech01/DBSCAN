@@ -75,15 +75,10 @@ build/windows/appDBSCAN.exe
 
 Если `.exe` не запускается двойным кликом, откройте проект через Qt Creator.
 
-## Готовые сборки через GitHub
+## Готовые сборки
 
-В проект добавлен GitHub Actions workflow:
-
-```text
-.github/workflows/build-artifacts.yml
-```
-
-Он собирает архивы для macOS и Windows. После запуска workflow готовые файлы можно скачать во вкладке `Actions` на GitHub:
+Готовые сборки для macOS и Windows можно найти на GitHub во вкладке `Releases`.
+Там лежат архивы:
 
 ```text
 DBSCAN-Visualizer-macOS
